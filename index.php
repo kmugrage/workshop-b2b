@@ -1,4 +1,3 @@
-
 <h2>This is the B2B Website!</h2>
 
 <?php
