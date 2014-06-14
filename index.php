@@ -17,8 +17,8 @@ $context = stream_context_create(array('http' => array(
 )));
 
 //URL of the XMLRPC Server
-$myHost = explode("-",$_SERVER['HTTP_HOST']);
-$server = 'http://' . $myHost[0] . '-services.work.shop/xmlrpc.php';
+$mySite = explode("-",$_SERVER['REQUEST_URI']);
+$server = 'http://localhost/' . $mySite[1] . 'dev/services/xmlrpc.php';
 
 $file = file_get_contents($server, false, $context);
 //decode the XMLRPC response
